@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Каталог эстонской литературы</title>
+<style>
+  :root{
+    --bg:#f4f7fa; --paper:#ffffff; --ink:#161c24; --muted:#657080;
+    --accent:#0072ce; --dark:#111; --line:#dbe3ec; --hero:#0b2c4d;
+  }
+  @media (prefers-color-scheme:dark){
+    :root{--bg:#0f141a;--paper:#171e26;--ink:#eaf0f6;--muted:#98a6b6;--accent:#62b3f5;--dark:#ddd;--line:#27323e;--hero:#061423;}
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:Georgia,"Times New Roman",serif;line-height:1.55}
+  header{text-align:center;padding:64px 20px 48px;color:#f3f7fb;position:relative;
+    background:linear-gradient(135deg,var(--hero),#0072ce)}
+  header::after{content:"";position:absolute;left:0;right:0;bottom:0;height:10px;
+    background:linear-gradient(180deg,#0072ce 0 33.3%,#111 33.3% 66.6%,#fff 66.6% 100%)}
+  header h1{margin:0 0 8px;font-size:clamp(2rem,5vw,3.4rem);letter-spacing:.02em}
+  header h1 span{color:#bfe0ff}
+  header p{margin:0;color:#cfe3f5;font-style:italic;font-size:1.1rem}
+  .ornament{color:#bfe0ff;letter-spacing:.6em;margin-top:14px}
+  nav{position:sticky;top:0;z-index:10;background:var(--bg);border-bottom:1px solid var(--line);
+    padding:12px 16px;display:flex;flex-wrap:wrap;gap:10px;justify-content:center;align-items:center}
+  nav a{color:var(--ink);text-decoration:none;padding:6px 14px;border:1px solid var(--line);
+    border-radius:999px;font-size:.95rem;transition:.2s;background:var(--paper)}
+  nav a:hover{background:var(--accent);color:#fff;border-color:var(--accent)}
+  #search{padding:8px 16px;border-radius:999px;border:1px solid var(--line);background:var(--paper);
+    color:var(--ink);font:inherit;min-width:220px}
+  #search:focus{outline:2px solid var(--accent)}
+  main{max-width:1150px;margin:0 auto;padding:30px 20px 60px}
+  section{margin-top:56px;scroll-margin-top:80px}
+  section h2{font-size:2rem;margin:0 0 6px;display:flex;align-items:center;gap:14px}
+  section h2 .ico{font-size:1.6rem}
+  section h2::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,var(--accent),transparent)}
+  .desc{color:var(--muted);margin:0 0 22px;font-style:italic}
+  .authors{display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:20px}
+  .author{background:var(--paper);border:1px solid var(--line);border-top:4px solid var(--accent);
+    border-radius:12px;padding:20px 22px;box-shadow:0 2px 8px rgba(0,0,0,.05);transition:.25s}
+  .author:hover{transform:translateY(-3px);box-shadow:0 8px 20px rgba(0,0,0,.14);border-top-color:var(--dark)}
+  .author h3{margin:0 0 2px;font-size:1.35rem;color:var(--accent)}
+  .years{font-size:.85rem;color:var(--muted);margin-bottom:10px;display:block}
+  .author ul{list-style:none;margin:0;padding:0}
+  .author li{border-top:1px dashed var(--line)}
+  .author li a{display:block;padding:8px 2px;color:var(--ink);text-decoration:none;transition:.2s}
+  .author li a:hover{color:var(--accent);padding-left:8px}
+  .hidden{display:none!important}
+  #empty{text-align:center;color:var(--muted);margin-top:40px;display:none}
+  footer{text-align:center;padding:30px;color:var(--muted);border-top:1px solid var(--line);font-size:.9rem}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Каталог <span>эстонской литературы</span></h1>
+  <p>Разделы · писатели · произведения</p>
+  <div class="ornament">❦ ❦ ❦</div>
+</header>
+
+<nav>
+  <a href="#epos">Эпос и сказки</a>
+  <a href="#poeziya">Поэзия</a>
+  <a href="#klassika">Классика</a>
+  <a href="#xx">Проза XX века</a>
+  <a href="#sovremennaya">Современная проза</a>
+  <input id="search" type="search" placeholder="🔍 Поиск писателя или книги…">
+</nav>
+
+<main>
+
+<section id="epos">
+  <h2><span class="ico">🪓</span>Эпос и сказки</h2>
+  <p class="desc">Национальный эпос, собранный из народных сказаний.</p>
+  <div class="authors">
+    <article class="author"><h3>Фридрих Рейнхольд Крейцвальд</h3><span class="years">1803 – 1882</span>
+      <ul>
+        <li><a href="kalevipoeg/">Калевипоэг</a></li>
+        <li><a href="estonskie-narodnye-skazki/">Эстонские народные сказки</a></li>
+      </ul></article>
+  </div>
+</section>
+
+<section id="poeziya">
+  <h2><span class="ico">🪶</span>Поэзия</h2>
+  <p class="desc">От национального пробуждения до современной лирики.</p>
+  <div class="authors">
+    <article class="author"><h3>Лидия Койдула</h3><span class="years">1843 – 1886</span>
+      <ul>
+        <li><a href="solovey-emayygi/">Соловей Эмайыги</a></li>
+        <li><a href="moya-otchizna-moya-lyubov/">Моя отчизна — моя любовь</a></li>
+      </ul></article>
+    <article class="author"><h3>Юхан Лийв</h3><span class="years">1864 – 1913</span>
+      <ul>
+        <li><a href="izbrannye-stikhotvoreniya-liiva/">Избранные стихотворения</a></li>
+      </ul></article>
+    <article class="author"><h3>Марие Ундер</h3><span class="years">1883 – 1980</span>
+      <ul>
+        <li><a href="izbrannye-stikhotvoreniya-under/">Избранные стихотворения</a></li>
+      </ul></article>
+    <article class="author"><h3>Яан Каплинский</h3><span class="years">1941 – 2022</span>
+      <ul>
+        <li><a href="izbrannye-stikhotvoreniya-kaplinskogo/">Избранные стихотворения</a></li>
+      </ul></article>
+  </div>
+</section>
+
+<section id="klassika">
+  <h2><span class="ico">📖</span>Классика</h2>
+  <p class="desc">Основатели эстонской прозы: деревня, правда и право, взросление.</p>
+  <div class="authors">
+    <article class="author"><h3>Эдуард Вильде</h3><span class="years">1865 – 1933</span>
+      <ul>
+        <li><a href="mahtraskaya-voyna/">Махтраская война</a></li>
+        <li><a href="prorok-maltsvet/">Пророк Мальтсвет</a></li>
+      </ul></article>
+    <article class="author"><h3>Антон Хансен Таммсааре</h3><span class="years">1878 – 1940</span>
+      <ul>
+        <li><a href="pravda-i-pravo/">Правда и право</a></li>
+        <li><a href="zhizn-i-lyubov/">Жизнь и любовь</a></li>
+      </ul></article>
+    <article class="author"><h3>Оскар Лутс</h3><span class="years">1887 – 1953</span>
+      <ul>
+        <li><a href="vesna/">Весна</a></li>
+        <li><a href="leto/">Лето</a></li>
+      </ul></article>
+  </div>
+</section>
+
+<section id="xx">
+  <h2><span class="ico">⚓</span>Проза XX века</h2>
+  <p class="desc">Исторические романы, путевые очерки и проза поздней советской эпохи.</p>
+  <div class="authors">
+    <article class="author"><h3>Айно Каллас</h3><span class="years">1878 – 1956</span>
+      <ul>
+        <li><a href="nevesta-volka/">Невеста волка</a></li>
+      </ul></article>
+    <article class="author"><h3>Юхан Смуул</h3><span class="years">1922 – 1971</span>
+      <ul>
+        <li><a href="ledovaya-kniga/">Ледовая книга</a></li>
+      </ul></article>
+    <article class="author"><h3>Яан Кросс</h3><span class="years">1920 – 2007</span>
+      <ul>
+        <li><a href="imperatorskiy-bezumets/">Императорский безумец</a></li>
+        <li><a href="mezhdu-trekh-zol/">Между трёх зол</a></li>
+        <li><a href="professor-martens-uezzhaet/">Профессор Мартенс уезжает</a></li>
+      </ul></article>
+    <article class="author"><h3>Мати Унт</h3><span class="years">1944 – 2005</span>
+      <ul>
+        <li><a href="osenniy-bal/">Осенний бал</a></li>
+      </ul></article>
+  </div>
+</section>
+
+<section id="sovremennaya">
+  <h2><span class="ico">⭐</span>Современная проза</h2>
+  <p class="desc">Фольклорная фантастика и сатира нового века.</p>
+  <div class="authors">
+    <article class="author"><h3>Андрус Кивиряхк</h3><span class="years">р. 1970</span>
+      <ul>
+        <li><a href="chelovek-kotoryy-znal-yazyk-zmey/">Человек, который знал язык змей</a></li>
+      </ul></article>
+  </div>
+</section>
+
+<p id="empty">Ничего не найдено 📚</p>
+</main>
+
+<footer>© Каталог эстонской литературы</footer>
+
+<script>
+  const input = document.getElementById('search');
+  input.addEventListener('input', () => {
+    const q = input.value.trim().toLowerCase();
+    let total = 0;
+    document.querySelectorAll('section').forEach(sec => {
+      let shown = 0;
+      sec.querySelectorAll('.author').forEach(card => {
+        const authorMatch = card.querySelector('h3').textContent.toLowerCase().includes(q);
+        let any = false;
+        card.querySelectorAll('li').forEach(li => {
+          const ok = !q || authorMatch || li.textContent.toLowerCase().includes(q);
+          li.classList.toggle('hidden', !ok);
+          if (ok) any = true;
+        });
+        card.classList.toggle('hidden', !any);
+        if (any) shown++;
+      });
+      sec.classList.toggle('hidden', shown === 0);
+      total += shown;
+    });
+    document.getElementById('empty').style.display = total ? 'none' : 'block';
+  });
+</script>
+</body>
+</html>
